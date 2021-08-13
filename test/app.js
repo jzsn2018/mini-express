@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-08-13 19:53:57
  * @LastEditors: Timothy
- * @LastEditTime: 2021-08-13 20:45:48
+ * @LastEditTime: 2021-08-13 21:04:48
  * @Description: 
  */
 
@@ -29,4 +29,8 @@ app.get('/ab+cd', (req, res) => {
 })
 app.get('/ab*cd', (req, res) => {
   res.end('/ab*cd');
+})
+app.get('/ab/:userId/:reportId', (req, res) => {
+  console.log("req", req.params);// { userId: '32', reportId: '45' }
+  res.end('/ab/:userId/:reportId');
 })
